@@ -3,6 +3,7 @@
   border-radius: 10px;
   margin: 50px auto 0;
   padding: 20px;
+  background-color: #cfcf3444;
 }
 
 .button {
@@ -17,3 +18,4 @@
 .img{
   height: 60%;
 }
+
