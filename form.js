@@ -5,7 +5,6 @@ const heroes = [
     {name: "captain-america" , power:"shield" , src: "https://d3m9l0v76dty0.cloudfront.net/system/photos/650767/large/8324ef4967211b85dba0617474e7122b.jpg"},
 ];
 
-
 document.querySelector('#addBtn').addEventListener('click',(e)=>{
     e.preventDefault();
     location.href = "details.html";
@@ -20,12 +19,11 @@ function printHeros(){
     localStorage.setItem('heroStrength', heroStrength);    
     localStorage.setItem('heroImgSrc', heroImgSrc);    
     
-    const cardsContainer = document.getElementById('cardsContainer');
+    // const cardsContainer = document.getElementById('cardsContainer');
     const div = document.createElement('div');
     div.innerHTML = `<h5>${nameHero}</h5>
     <p calss="col">${heroStrength}</p>
     <p calss="col"><a href = "edit.html">${heroImgSrc}</a></p>`
-
     localStorage.getItem('nameHero');
     localStorage.getItem('heroStrength');
     localStorage.getItem('heroImgSrc');
