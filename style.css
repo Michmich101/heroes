@@ -15,6 +15,10 @@
   height: 60%;
 }
 
+.hidden{
+  display: none;
+}
+
 .img{
   height: 60%;
 }
