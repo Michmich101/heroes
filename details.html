@@ -12,10 +12,10 @@
     <h1>Heroes Gallery</h1>
   </header>
 
-  <main class="container">
+  <main class="container d-flex flex-column flex-fill">
 
-    <section class="row" id="cards">
-      <div id="cardsContainer" class="card-group">
+    <section class="row d-flex" id="cards">
+      <div id="cardsContainer" class="card-group d-flex">
         <div id="hero1" class="card">
           <img src="הענק הירוק.jpg" class="card-img-top img" alt="hero">
           <div class="card-body">
@@ -49,15 +49,15 @@
           </div>
         </div>
       </div>
-      </div>
-
-      <section class="row" id="buttons">
-        <div class="col-lg-12 button">
-          <button id="add" class="btn btn-danger">Add</button>
-          <button class="btn btn-danger">Compare</button>
-        </div>
-      </section>
     </section>
+
+    <section id="buttons" class="row d-flex">
+      <div class="col-lg-12 button">
+        <button id="add" class="btn btn-danger">Add</button>
+        <button class="btn btn-danger">Compare</button>
+      </div>
+    </section>
+
 
 
   </main>
