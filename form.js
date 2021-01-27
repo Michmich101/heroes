@@ -16,15 +16,4 @@ function printHeros() {
   };
   heroes.push(hero);
   localStorage.setItem('heroesArr', heroes);
-
-
-  // // const cardsContainer = document.getElementById('cardsContainer');
-  // const div = document.createElement('div');
-  // div.innerHTML = `<h5>${nameHero}</h5>
-  //   <p calss="col">${heroStrength}</p>
-  //   <p calss="col"><a href = "edit.html">${heroImgSrc}</a></p>`
-  // localStorage.getItem('nameHero');
-  // localStorage.getItem('heroStrength');
-  // localStorage.getItem('heroImgSrc');
-  // cardsContainer.appendChild(div);
 }

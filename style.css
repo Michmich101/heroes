@@ -9,6 +9,14 @@
   text-align: center;
 }
 
+.card-title {
+  background-color: cadetblue;
+}
+
+.card-text{
+  background-color: rgb(255, 252, 58);
+}
+
 /* .card {
   margin-top: 5%;
   height: 60%;
