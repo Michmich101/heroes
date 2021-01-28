@@ -16,11 +16,18 @@
   <div class="card-body">
     <h5 class="card-title">${hero.name}</h5>
     <p class="card-text">${hero.power}</p>
-    <p class="card-text"><a href="edit.html" class="text-muted">Edit hero details</a></p>
+    <p class="card-text"><a href="edit.html" id="${hero.name.toLowerCase()}" class="text-muted">Edit hero details</a></p>
   </div>`;
      cardGroup.appendChild(card);
    }
  });
+
+//TODO LIST - details.js
+//1. add event listeners to all anchors
+//2. locate which ancho was clicked and send the hero details to local storage
+//3. redirect to edit.html
+
+
 
  function saveToStorage() {
    const defaultHeroes = [{
@@ -46,3 +53,5 @@
    ];
    localStorage.setItem('heroesArr', JSON.stringify(defaultHeroes));
  }
+
+
