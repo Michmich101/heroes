@@ -33,13 +33,6 @@
    location.href = "edit.html";
  }
 
- //TODO LIST - details.js
- //1. add event listeners to all anchors
- //2. locate which ancho was clicked and send the hero details to local storage
- //3. redirect to edit.html
-
-
-
  function saveToStorage() {
    const defaultHeroes = [{
        id: 1,
