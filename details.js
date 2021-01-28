@@ -5,6 +5,9 @@
 
  window.addEventListener('load', () => {
    const heroes = JSON.parse(localStorage.getItem('heroesArr'));
+   if (!heroes) {
+     saveToStorage();
+   }
    const cardGroup = document.getElementById('cardsContainer');
    for (let hero of heroes) {
      const card = document.createElement('div');
@@ -43,5 +46,3 @@
    ];
    localStorage.setItem('heroesArr', JSON.stringify(defaultHeroes));
  }
-
- saveToStorage();
