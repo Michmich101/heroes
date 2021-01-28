@@ -1,24 +1,26 @@
-const editName = document.getElementById('heroName');
+const editName = document.getElementById('heroName'),
+  editStrength = document.getElementById('heroStrength'),
+  newImgSrc = document.getElementById('heroImgSrc');
 
-editName.value = "blablu";
+const myHero = JSON.parse(localStorage.getItem('editHero'));
+window.addEventListener('load', () => {
+  if (!myHero) {
+    location.href = "details.html";
+  }
+  editName.value = myHero.name;
+  editStrength.value = myHero.power;
+})
 
+document.querySelector('#editBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  const heroes = JSON.parse(localStorage.getItem('heroesArr'));
+  const editedHero = heroes.find(hero => Number(myHero.id) === hero.id);
+  editedHero.src = newImgSrc.value;
+  localStorage.setItem('heroesArr', JSON.stringify(heroes));
+  location.href = "details.html";
+})
 
-
-
-
-document.querySelector('#backBtn').addEventListener('click', (e) =>{
-    e.preventDefault();
-    location.href= "details.html";
+document.querySelector('#backBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  location.href = "details.html";
 });
-
-
-//TODO LIST - details.js
-//1. add event listeners to all anchors
-//2. locate which ancho was clicked and send the hero details to local storage
-//3. redirect to edit.html
-
-//TODO LIST - edit.js
-//1. take info from localstoarge, if empty return to details.html
-//2. paste the info into the input boxes
-//3. take all the changes and save them to local storage
-//4. must be an array (to push into localstorage)

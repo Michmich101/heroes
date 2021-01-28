@@ -10,6 +10,7 @@ const heroName = document.getElementById('heroName'),
 function printHeros() {
   const heroes = JSON.parse(localStorage.getItem('heroesArr'));
   const hero = {
+    id: heroes[heroes.length - 1].id + 1,
     name: heroName.value,
     power: heroStrength.value,
     src: heroImgSrc.value
